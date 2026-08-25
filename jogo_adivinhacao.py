@@ -1,17 +1,18 @@
 import os
-os.system("cls")
-import random 
+import random
 
-numero_sorteado = random.radiant(1,20)
+os.system("cls")
+
+numero_sorteado = random.randint(1,20)
 
 while True:
     try:
         numero = int(input("Chute um número de 1 a 20: "))
 
         if numero > numero_sorteado:
-            print("O número secreto é maior. Tente de novo!")
+           print("O número secreto é menor. Tente de novo!\n")
         elif numero < numero_sorteado:
-            print("O número secreto é menor. Tente de novo!")
+          print("O número secreto é maior. Tente de novo!\n")
         else:
             print("Parabéns, você acertou!")
             break

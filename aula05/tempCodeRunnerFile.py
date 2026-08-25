@@ -1,0 +1,1 @@
+print(f"Nome Sorteado: {nome_sorteado}")
