@@ -1,6 +1,16 @@
 import customtkinter as ctk 
 ctk.set_appearance_mode("dark")
 
+# Funcoes
+def calcular():
+    dist=float (distancia.get())
+    preco=float (preco_combustivel.get())
+    cons=float(consumo.get())
+    
+    formula = (dist / cons) * preco
+    
+    resultado.configure(text=f'O valor da viagem é de R${formula:.2f} reais')
+
 janela = ctk.CTk()
 janela.geometry('500x400')
 janela.title('Calculadora de Viagem')
@@ -51,11 +61,19 @@ botao =ctk.CTkButton(janela,
                      text_color="#FFFFFF",
                      fg_color="#B85656",
                      border_color="#A523BE",
-                     cursor='spider')
+                     cursor='hand2',
+                     font=('times new Roman',15,'bold'),
+                     command=calcular)
 
-botao.pack(pady=35)
+botao.pack(pady=10)
 
 
+resultado =ctk.CTkLabel(janela,
+                        text='',
+                        text_color='#FFFFFF',
+                        font=('Verdana',20))
+
+resultado.pack(pady=10)
 
 
 
