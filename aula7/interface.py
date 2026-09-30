@@ -1,5 +1,5 @@
 import customtkinter as ctk
-ctk.set_appearance_mode("#F3B600")
+ctk.set_appearance_mode("dark")
 
 # janela
 
