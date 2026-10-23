@@ -35,6 +35,7 @@ def converter_moeda():
 
 janela = ctk.CTk()
 janela.geometry('650x500')
+janela.configure(fg_color="#522291")
 janela.resizable
 janela.title('Conversor de Moedas')
 janela.iconbitmap('moeda/coins_copy_finance_icon_125514.ico')
@@ -94,8 +95,8 @@ resultado = ctk.CTkLabel(janela,
                          font=('Verdana',17),
                         corner_radius=10,
                         fg_color="#9EA0A0",
-                        border_width=2,
-                        border_color='black',
+                        # border_width=2,
+                        # border_color='black',
                         width=350,
                         height=120
 
